@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SlimFy</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="payment">
+      <div class="payment__wrapper">
+        <div class="payment__background">
+          <div class="background">
+            <img
+              class="background__food-top"
+              src="./img/food-up.png"
+              alt="background"
+            />
+            <img
+              class="background__food-center"
+              src="./img/food-center.png"
+              alt="background"
+            />
+            <img
+              class="background__food-down"
+              src="./img/food-down.png"
+              alt="background"
+            />
+          </div>
+        </div>
+        <div class="container">
+          <div class="payment__logo">
+            <div class="logo">
+              <a class="logo__link" href="#"
+                ><img class="logo__img" src="./img/logo.svg" alt="logo"
+              /></a>
+            </div>
+          </div>
+          <div class="payment__title">
+            <h2 class="payment__title-inner">
+              Получите доступ к вашему SlimFy уже сейчас
+            </h2>
+          </div>
+          <div class="payment__tariff">
+            <div class="payment__plan-wrapper">
+              <div class="payment__plan">
+                <p class="payment__plan-desc">Выберите свой план SlimFy</p>
+              </div>
+              <div class="payment__rating">
+                <img
+                  class="payment__rating-stars"
+                  src="./img/stars.svg"
+                  alt="stars"
+                />
+                <p class="payment__rating-clients">4231 довольных клиентов</p>
+              </div>
+            </div>
+            <div class="payment__discount">
+              <img
+                class="payment__discount-img"
+                src="./img/clock-orange.svg"
+                alt="clock"
+              />
+              <p class="payment__discount-desc">Скидка истекает: 14:24</p>
+            </div>
+            <form>
+              <div class="payment__period">
+                <label class="payment__label">
+                  <input
+                    class="payment__radio-input"
+                    name="card"
+                    type="radio"
+                    checked
+                  />
+                  <span class="payment__radio-span"></span>
+                  <span class="payment__period-card">
+                    <span class="payment__date">
+                      <img
+                        class="payment__date-img payment__date-img-one"
+                        src="./img/food.svg"
+                        alt="food"
+                      />
+                      <span class="payment__date-desc">Месяц</span>
+                    </span>
+                    <span class="payment__price">
+                      <span class="payment__price-initial">768 ₽</span>
+                      <span class="payment__price-wrapper">
+                        <span class="payment__price-underline">1920 ₽</span>
+                        <span class="payment__price-discount">-60%</span>
+                      </span>
+                    </span>
+                    <span class="payment__time">
+                      <span class="payment__time-desc">Ежемесячная оплата</span>
+                    </span>
+                  </span>
+                </label>
+                <label class="payment__label">
+                  <input
+                    class="payment__radio-input"
+                    name="card"
+                    type="radio"
+                    checked
+                  />
+                  <span class="payment__radio-span"></span>
+                  <span class="payment__period-card">
+                    <span class="payment__date">
+                      <img
+                        class="payment__date-img payment__date-img-two"
+                        src="./img/food.svg"
+                        alt="food"
+                      />
+                      <span class="payment__date-desc">Неделя</span>
+                    </span>
+                    <span class="payment__price">
+                      <span class="payment__price-initial">345 ₽</span>
+                      <span class="payment__price-wrapper">
+                        <span class="payment__price-underline">448 ₽</span>
+                        <span class="payment__price-discount">-23%</span>
+                      </span>
+                    </span>
+                    <span class="payment__time">
+                      <span class="payment__time-desc"
+                        >Еженедельная оплата</span
+                      >
+                    </span>
+                  </span>
+                </label>
+                <label class="payment__label">
+                  <input
+                    class="payment__radio-input"
+                    name="card"
+                    type="radio"
+                    checked
+                  />
+                  <span class="payment__radio-span"></span>
+                  <span class="payment__period-card">
+                    <span class="payment__date">
+                      <img
+                        class="payment__date-img payment__date-img-three"
+                        src="./img/food.svg"
+                        alt="food"
+                      />
+                      <span class="payment__date-desc">День</span>
+                    </span>
+                    <span class="payment__price">
+                      <span class="payment__price-initial">64 ₽</span>
+                    </span>
+                    <span class="payment__time">
+                      <span class="payment__time-desc">Ежедневная оплата</span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+              <div class="payment__buttons">
+                <div class="payment__submit-wrapper">
+                  <button class="payment__submit-btn" type="submit">
+                    Оплатить
+                  </button>
+                </div>
+                <div class="payment__warranty">
+                  <div class="payment__warranty-button">
+                    <img
+                      class="payment__warranty"
+                      src="./img/clock.svg"
+                      alt="clock"
+                    />
+                    <p class="payment__warranty-desc">
+                      Гарантия возврата средств
+                    </p>
+                  </div>
+                  <div class="payment__warranty-button">
+                    <img
+                      class="payment__warrant-img"
+                      src="./img/wallet.svg"
+                      alt="wallet"
+                    />
+                    <p class="payment__warranty-desc">Без скрытых платежей</p>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="payment__agree">
+              <label class="payment__agree-label">
+                <input class="payment__agree-input" type="checkbox" />
+                <span class="payment__agree-checkbox"></span>
+              </label>
+              <span class="payment__agree-desc">
+                Я ознакомился(-ась) и согласен(-сна) с
+                <a class="payment__agree-link" href="#"
+                  >пользовательским соглашением</a
+                >
+              </span>
+            </div>
+            <div class="payment__operators">
+              <img
+                class="payment__master-card"
+                src="./img/master-card.svg"
+                alt="MasterCard"
+              />
+              <img class="payment__visa" src="./img/visa.svg" alt="Visa" />
+              <img class="payment__mir" src="./img/mir.svg" alt="Мир" />
+            </div>
+          </div>
+          <div class="payment__support">
+            <div class="payment__support-wrapper">
+              <div class="payment__support-email">
+                <p class="payment__support-desc">Поддержка пользователей:</p>
+                <a
+                  class="payment__support-link"
+                  href="mailto:helpdesk@slimfy.ru"
+                  >helpdesk@slimfy.ru</a
+                >
+              </div>
+              <div class="payment__navigation">
+                <a class="payment__navigation-link" href="#">Блог</a>
+                <a class="payment__navigation-link" href="#">О нас</a>
+              </div>
+            </div>
+            <div class="payment__limitation">
+              <p class="payment__limitation-desc">
+                Ограничение ответственности: информация, размещенная на данном
+                ресурсе, предназначена для свободного изучения пользователем.
+                компания не несет ответственности за прямой или косвенный ущерб
+                в результате использования материалов сайта. достигнутые
+                результаты являются индивидуальными и не могут быть
+                гарантированы. информация, представленная на сайте, не заменяет
+                консультацию врача и не может являться основой для постановки
+                диагноза или лечения.
+              </p>
+            </div>
+            <div class="payment__politics">
+              <p class="payment__politics-desc">
+                ООО «ЛАДЕР», ОГРН 1224600002440
+              </p>
+              <div class="payment__politics-wrapper">
+                <a class="payment__politics-link" target="_blank" href="#"
+                  >Политика конфиденциальности</a
+                >
+                <a class="payment__politics-link" target="_blank" href="#"
+                  >Пользовательское соглашение</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
