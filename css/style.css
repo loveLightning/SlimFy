@@ -192,6 +192,13 @@ a {
   height: 206px;
   -webkit-transition: 0.4s ease all;
   transition: 0.4s ease all;
+  cursor: pointer;
+}
+
+.payment__period-card:hover {
+  border: 1px solid #9400B5;
+  -webkit-box-shadow: 0px 4px 24px rgba(137, 1, 168, 0.05);
+          box-shadow: 0px 4px 24px rgba(137, 1, 168, 0.05);
 }
 
 .payment__date {
@@ -210,9 +217,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   gap: 12px;
   white-space: nowrap;
   margin-bottom: 13px;
@@ -221,7 +228,7 @@ a {
 .payment__price-initial {
   font-weight: 800;
   font-size: 32px;
-  line-height: 38px;
+  line-height: 30px;
 }
 
 .payment__price-wrapper {
@@ -229,12 +236,14 @@ a {
   display: -ms-flexbox;
   display: flex;
   gap: 12px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .payment__price-underline {
   font-weight: 800;
   font-size: 20px;
-  line-height: 30px;
   text-decoration: line-through;
   color: #949494;
 }
@@ -289,7 +298,6 @@ a {
   border: 1px solid #9400B5;
   border-radius: 50%;
   display: inline-block;
-  position: relative;
   position: absolute;
   top: 24px;
   right: 24px;
@@ -297,6 +305,7 @@ a {
 
 .payment__radio-input:checked + .payment__radio-span::before {
   content: '';
+  display: inline-block;
   background: #9400B5;
   width: 13px;
   height: 13px;
@@ -398,6 +407,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   gap: 12px;
+  cursor: pointer;
 }
 
 .payment__agree-input {
@@ -405,7 +415,7 @@ a {
 }
 
 .payment__agree-checkbox {
-  width: 20px;
+  min-width: 20px;
   height: 20px;
   position: relative;
   border: 1px solid #8700A5;
@@ -485,6 +495,26 @@ a {
   font-size: 20px;
   line-height: 26px;
   color: #9400B5;
+  position: relative;
+}
+
+.payment__support-link::before {
+  content: '';
+  width: 0;
+  position: absolute;
+  height: 1px;
+  background-color: #9400B5;
+  bottom: 1px;
+  -webkit-transition: 0.4s ease all;
+  transition: 0.4s ease all;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.payment__support-link:hover::before {
+  content: '';
+  width: 100%;
 }
 
 .payment__navigation {
@@ -526,6 +556,12 @@ a {
 
 .payment__politics-link {
   text-decoration: underline;
+  -webkit-transition: 0.4s ease all;
+  transition: 0.4s ease all;
+}
+
+.payment__politics-link:hover {
+  color: #9400B5;
 }
 
 .payment__politics-wrapper {
@@ -624,11 +660,19 @@ a {
     margin-bottom: 8px;
     height: 40px;
   }
+  .payment__price-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    line-height: 30px;
+  }
   .payment__price-initial {
     font-size: 24px;
+    line-height: 38px;
   }
   .payment__price-underline {
     font-size: 18px;
+    line-height: 1.3em;
   }
   .payment__date-img-one {
     width: 40px;
@@ -687,6 +731,12 @@ a {
             align-items: center;
     gap: 12px;
     height: auto;
+  }
+  .payment__price-wrapper {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    line-height: 1.0em;
   }
 }
 
@@ -752,15 +802,6 @@ a {
   }
   .payment__warranty-button {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -783,6 +824,10 @@ a {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+  .payment__time-desc {
+    font-size: 14px;
+    line-height: 24px;
   }
 }
 
@@ -815,6 +860,18 @@ a {
   .payment__wrapper {
     margin-bottom: 25px;
   }
+  .payment__support {
+    margin-bottom: 50px;
+  }
+  .payment__price-discount {
+    padding: 2px 12px;
+  }
+  .payment__tariff {
+    padding: 24px 15px;
+  }
+  .payment__price-underline {
+    line-height: 1.1em;
+  }
 }
 
 @media screen and (max-width: 404px) {
@@ -832,16 +889,27 @@ a {
   .payment__discount-img {
     display: none;
   }
-  .payment__time-desc {
-    font-size: 14px;
-    line-height: 24px;
-  }
   .payment__price {
     margin-bottom: 0px;
   }
   .payment__agree-desc {
     font-size: 12px;
     line-height: 17px;
+  }
+  .payment__support {
+    margin-bottom: 40px;
+  }
+  .payment__price-underline {
+    line-height: 1.1em;
+  }
+  .payment__buttons {
+    gap: 16px;
+  }
+  .payment__warranty {
+    gap: 16px;
+  }
+  .payment__support {
+    margin-bottom: 50px;
   }
 }
 
@@ -851,7 +919,7 @@ a {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 315px) {
   .payment__price {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -860,5 +928,11 @@ a {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    gap: 0px;
+  }
+  .payment__price-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }

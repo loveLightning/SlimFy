@@ -146,7 +146,6 @@ a {
         gap: 24px;
     }
 
-    //label
     &__label {
         position: relative;
         width: 100%;
@@ -160,6 +159,12 @@ a {
         padding: 28px 32px;
         height: 206px;
         transition: 0.4s ease all;
+        cursor: pointer;
+    }
+
+    &__period-card:hover {
+        border: 1px solid #9400B5;
+        box-shadow: 0px 4px 24px rgba(137, 1, 168, 0.05);
     }
 
     &__date {
@@ -172,7 +177,7 @@ a {
 
     &__price {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         gap: 12px;
         white-space: nowrap;
         margin-bottom: 13px;
@@ -181,18 +186,18 @@ a {
     &__price-initial {
         font-weight: 800;
         font-size: 32px;
-        line-height: 38px;
+        line-height: 30px;
     }
 
     &__price-wrapper {
         display: flex;
         gap: 12px;
+        align-items: flex-end;
     }
 
     &__price-underline {
         font-weight: 800;
         font-size: 20px;
-        line-height: 30px;
         text-decoration: line-through;
         color: #949494;
     }
@@ -247,7 +252,6 @@ a {
         border: 1px solid #9400B5;
         border-radius: 50%;
         display: inline-block;
-        position: relative;
         position: absolute;
         top: 24px;
         right: 24px;
@@ -255,6 +259,7 @@ a {
 
     &__radio-input:checked + &__radio-span::before {
         content: '';
+        display: inline-block;
         background: #9400B5;
         width: 13px;
         height: 13px;
@@ -332,6 +337,7 @@ a {
         display: flex;
         align-items: center;
         gap: 12px;
+        cursor: pointer;
     }
 
     &__agree-input {
@@ -339,7 +345,7 @@ a {
     }
 
     &__agree-checkbox {
-        width: 20px;
+        min-width: 20px;
         height: 20px;
         position: relative;
         border: 1px solid #8700A5;
@@ -401,6 +407,24 @@ a {
         font-size: 20px;
         line-height: 26px;
         color: #9400B5;
+        position: relative;
+    }
+
+    &__support-link::before {
+        content: '';
+        width: 0;
+        position: absolute;
+        height: 1px;
+        background-color: #9400B5;
+        bottom: 1px;
+        transition: 0.4s ease all;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__support-link:hover::before {
+        content: '';
+        width: 100%;
     }
     
     &__navigation {
@@ -432,6 +456,11 @@ a {
     
     &__politics-link {
         text-decoration: underline;
+        transition: 0.4s ease all;
+    }
+
+    &__politics-link:hover {
+        color: #9400B5;
     }
     
     &__politics-wrapper {
@@ -496,6 +525,7 @@ a {
     &__period-card:hover &__date-img{
         transform: scale(1.2);
     }
+
 }
 
 
@@ -518,12 +548,19 @@ a {
             height: 40px;
         }
 
+        &__price-wrapper {
+            align-items: center;
+            line-height: 30px;
+        }
+
         &__price-initial {
             font-size: 24px;
+            line-height: 38px
         } 
 
         &__price-underline {
             font-size: 18px;
+            line-height: 1.3em;
         }
 
         &__date-img-one {
@@ -574,6 +611,11 @@ a {
             align-items: center;
             gap: 12px;
             height: auto;
+        }
+
+        &__price-wrapper {
+            align-items: flex-end;
+            line-height: 1.0em;
         }
     }
 }
@@ -637,9 +679,6 @@ a {
 
         &__warranty-button {
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
     }
 }
@@ -662,6 +701,11 @@ a {
         &__support-email {
             flex-direction: column;
             align-items: flex-start;
+        }
+
+        &__time-desc {
+            font-size: 14px;
+            line-height: 24px;
         }
     }
 }
@@ -702,6 +746,22 @@ a {
         &__wrapper {
             margin-bottom: 25px;
         }
+
+        &__support {
+            margin-bottom: 50px;
+        }
+
+        &__price-discount {
+            padding: 2px 12px;
+        }
+
+        &__tariff {
+            padding: 24px 15px
+        }
+
+        &__price-underline {
+            line-height: 1.1em;
+        }
     }
 }
 
@@ -724,11 +784,6 @@ a {
             display: none;
         }
 
-        &__time-desc {
-            font-size: 14px;
-            line-height: 24px;
-        }
-
         &__price {
             margin-bottom: 0px;
         }
@@ -736,6 +791,26 @@ a {
         &__agree-desc {
             font-size: 12px;
             line-height: 17px;
+        }
+
+        &__support {
+            margin-bottom: 40px;
+        }
+
+        &__price-underline {
+            line-height: 1.1em;
+        }
+
+        &__buttons {
+            gap: 16px;
+        }
+
+        &__warranty {
+            gap: 16px;
+        }
+
+        &__support {
+            margin-bottom: 50px;
         }
     }
 }
@@ -749,11 +824,16 @@ a {
     
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 315px) {
     .payment {
         &__price {
             flex-direction: column;
             align-items: flex-start;
+            gap: 0px;
+        }
+
+        &__price-wrapper {
+            align-items: center;
         }
     }
     
